@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { PRODUCTS, STORE_INFO } from '@/data/mockData';
 import { Product } from '@/types';
 import { useCart } from '@/context/CartContext';
@@ -8,7 +10,6 @@ import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { 
   Search, 
   X, 
-  Zap, 
   ShoppingBag
 } from 'lucide-react';
 
@@ -115,17 +116,29 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 className="p-3 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-5 h-5 text-emerald-600" />
+                  <div className="relative w-12 h-12 rounded-xl bg-white border border-slate-200 overflow-hidden flex-shrink-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="48px"
+                      className="object-contain p-1"
+                    />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slate-900 line-clamp-1">{product.name}</h4>
+                    <Link
+                      href={`/product/${product.slug}`}
+                      onClick={onClose}
+                      className="text-sm font-bold text-slate-900 hover:text-emerald-600 line-clamp-1 transition-colors"
+                    >
+                      {product.name}
+                    </Link>
                     <div className="flex items-center gap-2 text-xs text-slate-500 mt-0.5">
                       <span className="text-emerald-700 font-bold">{product.brand}</span>
                       <span>•</span>
-                      {product.puffCount && <span>{product.puffCount.toLocaleString()} Puffs</span>}
-                      {product.puffCount && <span>•</span>}
+                      {product.puffCount && <span>{product.puffCount.toLocaleString()} Puffs •</span>}
                       <span className="text-slate-900 font-bold">₹{product.price}</span>
+                      <span className="text-slate-400 line-through text-[10px]">₹{product.originalPrice}</span>
                     </div>
                   </div>
                 </div>

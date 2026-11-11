@@ -4,18 +4,30 @@ import { STORE_INFO, PRODUCTS, FAQS } from '@/data/mockData';
 export default function SeoStructuredData() {
   const baseUrl = "https://vapeshopchandigarh.com";
 
-  // 1. LocalBusiness / Vape Store Schema
+  // 1. LocalBusiness / Vape Store Schema for Google Local Maps & Search Pack
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "Store",
     "@id": `${baseUrl}/#store`,
     "name": STORE_INFO.name,
-    "alternateName": "Vape Store Chandigarh Tricity",
-    "description": "Premier vape shop in Chandigarh offering 100% authentic disposable vapes, pod systems, e-liquids, and fast 30-45 min express delivery across Chandigarh, Mohali, and Panchkula.",
+    "alternateName": [
+      "Vape Store Chandigarh",
+      "Vape Shop Near Me Chandigarh",
+      "Vape Delivery Chandigarh",
+      "Best Vape Shop Mohali",
+      "Vape Store Panchkula"
+    ],
+    "description": "Premier vape shop in Chandigarh offering 100% authentic disposable vapes (Elfbar, Nasty, Lost Mary), refillable pod kits (Caliburn, Geekvape, Voopoo, Vaporesso), e-liquids, and superfast 30-45 min express delivery across Chandigarh, Mohali, and Panchkula.",
     "url": baseUrl,
     "email": STORE_INFO.email,
+    "telephone": "+919876543210",
     "priceRange": "₹₹",
-    "image": `${baseUrl}/images/vape-shop-chandigarh.jpg`,
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, UPI, Google Pay, PhonePe, Paytm, Net Banking",
+    "image": [
+      `${baseUrl}/images/hero-banner.jpg`,
+      `${baseUrl}/images/hero-banner-2.png`
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "SCO 84-85, Sector 17-C, Near Neelam Cinema",
@@ -68,6 +80,13 @@ export default function SeoStructuredData() {
       }
     ],
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Chandigarh",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "580",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "sameAs": [
       "https://wa.me/919876543210"
     ]
@@ -80,7 +99,7 @@ export default function SeoStructuredData() {
     "@id": `${baseUrl}/#website`,
     "name": STORE_INFO.name,
     "url": baseUrl,
-    "description": "Authentic disposable vapes, pod kits, and e-juices in Chandigarh with same day 45-min delivery.",
+    "description": "Authentic disposable vapes, pod kits, and e-juices in Chandigarh with same day 30-45 min delivery.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": `${baseUrl}/?s={search_term_string}`,
@@ -102,18 +121,21 @@ export default function SeoStructuredData() {
     }))
   };
 
-  // 4. ItemList / Product Catalog Schema
+  // 4. ItemList / Product Catalog Schema with Canonical Product Page URLs
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Featured Vapes in Chandigarh",
+    "name": "Featured Vapes & Pods in Chandigarh",
+    "description": "Comprehensive verified catalog of disposable vapes, pod systems, and nic salts available in Chandigarh with same-day express delivery.",
     "itemListElement": PRODUCTS.map((product, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "item": {
         "@type": "Product",
         "name": product.name,
+        "image": `${baseUrl}${product.image}`,
         "description": product.description,
+        "sku": product.id,
         "brand": {
           "@type": "Brand",
           "name": product.brand
@@ -123,12 +145,12 @@ export default function SeoStructuredData() {
           "price": product.price,
           "priceCurrency": "INR",
           "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-          "url": `${baseUrl}#featured-products`
+          "url": `${baseUrl}/product/${product.slug}`
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": product.rating,
-          "reviewCount": product.reviewCount
+          "ratingValue": product.rating.toString(),
+          "reviewCount": product.reviewCount.toString()
         }
       }
     }))
@@ -155,4 +177,3 @@ export default function SeoStructuredData() {
     </>
   );
 }
-

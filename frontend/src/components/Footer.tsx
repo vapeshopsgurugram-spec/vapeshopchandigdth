@@ -160,7 +160,7 @@ export default function Footer() {
               Official Brands In-Store
             </h3>
             <div className="flex flex-wrap gap-1.5">
-              {['Geek Bar', 'Elf Bar', 'Vozol', 'Uwell Caliburn', 'Vaporesso', 'Smok', 'Nasty Juice', 'BLVK Unicorn', 'IGET', 'Lost Mary'].map((brand, i) => (
+              {['Elfbar', 'Nasty', 'Lost Mary', 'Uwell Caliburn', 'Geekvape', 'Voopoo', 'Vaporesso', 'SMOK', 'Bang Box', 'iGET', 'Pod Salt'].map((brand, i) => (
                 <span 
                   key={i}
                   className="text-xs bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded-lg font-medium shadow-2xs"

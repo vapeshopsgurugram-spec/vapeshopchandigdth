@@ -6,7 +6,6 @@ import { STORE_INFO } from '@/data/mockData';
 import { useCart } from '@/context/CartContext';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { 
-  Clock, 
   Menu, 
   X, 
   Flame, 
@@ -33,40 +32,6 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-200 bg-white">
-      {/* Top Announcement Bar - Clean Light White/Emerald Theme (Only WhatsApp) */}
-      <div className="bg-emerald-50 border-b border-emerald-100 text-xs text-slate-700 py-2 px-4">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5 text-emerald-700 font-semibold">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
-              </span>
-              Fast 30-45 Min Delivery in Chandigarh, Mohali &amp; Panchkula
-            </span>
-            <span className="hidden md:inline-block text-slate-300">•</span>
-            <span className="hidden md:flex items-center gap-1 text-slate-600 font-medium">
-              <Clock className="w-3.5 h-3.5 text-emerald-600" />
-              Open Daily: 10:00 AM - 11:30 PM
-            </span>
-          </div>
-
-          {/* Only WhatsApp Feature */}
-          <div className="flex items-center gap-2">
-            <a 
-              href={`https://wa.me/${STORE_INFO.whatsapp}?text=Hello%20Vape%20Shop%20Chandigarh%2C%20I%20have%20an%20inquiry`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-emerald-700 hover:text-emerald-800 font-bold transition-colors bg-white px-2.5 py-1 rounded-full border border-emerald-200 shadow-2xs"
-              title="Order Vape on WhatsApp Chandigarh"
-            >
-              <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600" />
-              <span>WhatsApp Helpline: 24/7 Active</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navbar - Clean, Well-Spaced, No Text Clutter */}
       <nav 
         aria-label="Main Navigation"
@@ -183,7 +148,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu - Clean White Theme */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[102px] bg-white border-b border-slate-200 p-6 shadow-xl z-50 animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden fixed inset-x-0 top-full bg-white border-b border-slate-200 p-6 shadow-xl z-50 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col gap-4 text-base font-bold text-slate-800">
             <Link 
               href="#featured-products"

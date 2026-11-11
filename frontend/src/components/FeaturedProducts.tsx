@@ -1,18 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { PRODUCTS, STORE_INFO } from '@/data/mockData';
 import { Product } from '@/types';
 import { useCart } from '@/context/CartContext';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { 
-  Star, 
   Flame, 
   CheckCircle2, 
-  Sparkles,
-  Zap,
-  Plus,
-  ExternalLink
+  Plus, 
+  ExternalLink 
 } from 'lucide-react';
 
 export default function FeaturedProducts() {
@@ -47,7 +46,7 @@ export default function FeaturedProducts() {
             Best Selling Vapes &amp; Pod Kits in <span className="text-emerald-600">Chandigarh</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">
-            Official Geek Bar, Elfbar, Vozol, Uwell Caliburn &amp; Vaporesso devices with guaranteed same-day 45-min delivery across Tricity.
+            Official Elfbar, Nasty, Lost Mary, Uwell Caliburn &amp; Vaporesso devices with guaranteed same-day 45-min delivery across Tricity.
           </p>
         </div>
 
@@ -58,7 +57,7 @@ export default function FeaturedProducts() {
             { id: 'disposable', label: 'Disposables' },
             { id: 'pod-system', label: 'Pod Kits' },
             { id: 'e-liquid', label: 'Nic Salts' },
-            { id: 'accessories', label: 'Coils' },
+            { id: 'accessories', label: 'Coils & Pods' },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -74,117 +73,53 @@ export default function FeaturedProducts() {
           ))}
         </div>
 
-        {/* Products Grid - Crisp White Cards (2*2 on Mobile Phone Mode) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
-          {filteredProducts.map((product) => {
-            const discountPercentage = Math.round(
-              ((product.originalPrice - product.price) / product.originalPrice) * 100
-            );
-
-            return (
-              <article 
-                key={product.id}
-                className="group relative rounded-xl sm:rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 p-2.5 sm:p-5 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+        {/* Products Grid - Ultra Clean White Cards with Full-Width Images (Zero Side Gap) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          {filteredProducts.map((product) => (
+            <article 
+              key={product.id}
+              className="group relative rounded-xl sm:rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              {/* Full-Width Product Image (Edge-to-Edge, Zero Side Space) */}
+              <Link 
+                href={`/product/${product.slug}`}
+                className="relative w-full aspect-square bg-slate-50 overflow-hidden block"
+                title={`View ${product.name} details`}
               >
-                {/* Product Header Badges */}
-                <div className="flex items-center justify-between gap-1 mb-2 sm:mb-3">
-                  <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 border border-emerald-200 px-1.5 sm:px-2.5 py-0.5 rounded-full truncate max-w-[90px] sm:max-w-none">
-                    {product.brand}
-                  </span>
-                  
-                  {product.isBestSeller && (
-                    <span className="inline-flex items-center gap-0.5 text-[8px] sm:text-[10px] font-bold uppercase text-amber-800 bg-amber-50 border border-amber-200 px-1.5 sm:px-2 py-0.5 rounded-full whitespace-nowrap">
-                      <Flame className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-500" />
-                      <span className="hidden xs:inline sm:inline">Best Seller</span>
-                      <span className="xs:hidden sm:hidden">Hot</span>
-                    </span>
-                  )}
-                  {product.isNewArrival && (
-                    <span className="inline-flex items-center gap-0.5 text-[8px] sm:text-[10px] font-bold uppercase text-teal-800 bg-teal-50 border border-teal-200 px-1.5 sm:px-2 py-0.5 rounded-full whitespace-nowrap">
-                      <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-teal-500" />
-                      New
-                    </span>
-                  )}
+                <Image
+                  src={product.image}
+                  alt={`${product.name} - Vape Shop Chandigarh`}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
+
+              {/* Clean Bottom Content Box */}
+              <div className="p-2.5 sm:p-4 flex-1 flex flex-col justify-between">
+                {/* Product Title */}
+                <div className="mb-2">
+                  <Link href={`/product/${product.slug}`} className="block group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xs sm:text-sm font-bold text-slate-900 line-clamp-2 hover:text-emerald-600 leading-snug" title={product.name}>
+                      {product.name}
+                    </h3>
+                  </Link>
                 </div>
 
-                {/* Device Graphic Box */}
-                <div className="relative w-full h-28 sm:h-44 rounded-lg sm:rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center justify-center p-2 sm:p-4 overflow-hidden group-hover:bg-emerald-50/30 transition-colors">
-                  
-                  {/* Puff count pill */}
-                  {product.puffCount && (
-                    <div className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 bg-white border border-slate-200 text-slate-800 text-[8px] sm:text-[10px] font-extrabold px-1.5 sm:px-2 py-0.5 rounded shadow-2xs">
-                      ⚡ {product.puffCount.toLocaleString()}
+                {/* Pricing & Stock */}
+                <div className="pt-2 border-t border-slate-100">
+                  <div className="flex items-baseline justify-between mb-2.5">
+                    <div className="flex items-baseline gap-1.5 sm:gap-2">
+                      <span className="text-sm sm:text-base font-black text-slate-900">
+                        ₹{product.price}
+                      </span>
+                      <span className="text-[11px] sm:text-xs text-slate-400 line-through">
+                        ₹{product.originalPrice}
+                      </span>
                     </div>
-                  )}
-
-                  {/* Discount percentage tag */}
-                  <div className="absolute top-1.5 right-1.5 sm:top-2.5 sm:right-2.5 bg-emerald-100 text-emerald-800 text-[8px] sm:text-[10px] font-extrabold px-1.5 sm:px-2 py-0.5 rounded">
-                    {discountPercentage}% OFF
-                  </div>
-
-                  {/* Device Graphic Icon */}
-                  <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-2xs group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                    <Zap className="w-5 h-5 sm:w-8 sm:h-8 text-emerald-600" />
-                  </div>
-
-                  {/* Nicotine spec */}
-                  {product.nicotine && (
-                    <div className="mt-1.5 sm:mt-3 text-[9px] sm:text-[11px] font-semibold text-slate-600 bg-white px-1.5 sm:px-2.5 py-0.5 rounded-full border border-slate-200">
-                      {product.nicotine}
-                    </div>
-                  )}
-                </div>
-
-                {/* Rating & Review count */}
-                <div className="flex items-center gap-1 sm:gap-1.5 mt-2 sm:mt-3 text-[10px] sm:text-xs">
-                  <div className="flex items-center text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-slate-900 font-bold">{product.rating}</span>
-                  <span className="text-slate-400 text-[9px] sm:text-xs">({product.reviewCount})</span>
-                </div>
-
-                {/* Title & Description */}
-                <div className="my-1.5 sm:my-2.5 flex-1">
-                  <h3 className="text-xs sm:text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1">
-                    {product.name}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 line-clamp-1 sm:line-clamp-2 leading-relaxed">
-                    {product.description}
-                  </p>
-                </div>
-
-                {/* Flavors preview if available (compact on mobile) */}
-                {product.flavors && product.flavors.length > 0 && (
-                  <div className="hidden sm:block mb-3">
-                    <div className="text-[10px] uppercase font-bold text-slate-500 mb-1">
-                      Top Flavors in Chandigarh:
-                    </div>
-                    <div className="flex flex-wrap gap-1">
-                      {product.flavors.slice(0, 3).map((f, i) => (
-                        <span 
-                          key={i}
-                          className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200"
-                        >
-                          {f}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Pricing & Order CTA */}
-                <div className="pt-2 sm:pt-3 border-t border-slate-200">
-                  <div className="flex items-baseline justify-between mb-2 sm:mb-3">
-                    <div className="flex items-baseline gap-1 sm:gap-2">
-                      <span className="text-sm sm:text-xl font-black text-slate-900">₹{product.price}</span>
-                      <span className="text-[10px] sm:text-xs text-slate-400 line-through">₹{product.originalPrice}</span>
-                    </div>
-                    <span className="text-[9px] sm:text-[11px] text-emerald-700 font-bold flex items-center gap-0.5">
-                      <CheckCircle2 className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-emerald-600" />
-                      <span className="hidden xs:inline sm:inline">Stock</span>
+                    <span className="text-[10px] sm:text-xs text-emerald-700 font-bold flex items-center gap-0.5">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                      <span>Stock</span>
                     </span>
                   </div>
 
@@ -193,28 +128,28 @@ export default function FeaturedProducts() {
                     <button
                       type="button"
                       onClick={() => addToCart(product)}
-                      className="flex items-center justify-center gap-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-[10px] sm:text-xs py-2 sm:py-2.5 px-1 sm:px-2 rounded-lg sm:rounded-xl border border-slate-200 transition-colors cursor-pointer"
+                      className="flex items-center justify-center gap-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-[10px] sm:text-xs py-2 px-1.5 rounded-lg sm:rounded-xl border border-slate-200 transition-colors cursor-pointer"
                       title="Add to order basket"
                     >
-                      <Plus className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-600" />
-                      <span>Add</span>
+                      <Plus className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>+ Add</span>
                     </button>
 
                     <a
                       href={getWhatsAppLink(product)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[10px] sm:text-xs py-2 sm:py-2.5 px-1 sm:px-2 rounded-lg sm:rounded-xl shadow-xs transition-all whitespace-nowrap"
+                      className="flex items-center justify-center gap-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[10px] sm:text-xs py-2 px-1.5 rounded-lg sm:rounded-xl shadow-xs transition-all whitespace-nowrap"
                       title={`Buy ${product.name} on WhatsApp in Chandigarh`}
                     >
-                      <WhatsAppIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <WhatsAppIcon className="w-3.5 h-3.5" />
                       <span>Order</span>
                     </a>
                   </div>
                 </div>
-              </article>
-            );
-          })}
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Quick Help Box */}

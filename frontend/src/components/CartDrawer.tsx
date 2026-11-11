@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { 
@@ -100,6 +101,15 @@ export default function CartDrawer() {
                     key={item.product.id}
                     className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3"
                   >
+                    <div className="relative w-12 h-12 rounded-lg bg-white border border-slate-200 overflow-hidden flex-shrink-0">
+                      <Image
+                        src={item.product.image}
+                        alt={item.product.name}
+                        fill
+                        sizes="48px"
+                        className="object-contain p-1"
+                      />
+                    </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-slate-900 truncate">
                         {item.product.name}

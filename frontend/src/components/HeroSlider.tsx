@@ -27,11 +27,11 @@ export default function HeroSlider() {
     },
     {
       id: "banner-2",
-      image: "/images/hero-banner.jpg",
-      title: "Geekvape B60 & Lost Mary Turbo - Same Day Delivery Tricity",
-      alt: "Geekvape B60 and Lost Mary Turbo in Chandigarh",
-      whatsappText: "Hi%2C%20I%20want%20express%20vape%20delivery%20in%20Chandigarh",
-      tag: "🔥 Up to 35,000 Puffs Available • 100% Genuine QR Verified"
+      image: "/images/hero-banner-2.png",
+      title: "Premium Vape Collection Showcase - Same Day Delivery Tricity",
+      alt: "Premium Vape Collection Showcase in Chandigarh, Mohali & Panchkula",
+      whatsappText: "Hi%2C%20I%20want%20to%20order%20from%20the%20Premium%20Vape%20Collection%20in%20Chandigarh",
+      tag: "🔥 Premium Vape Collection • 100% Genuine QR Verified"
     }
   ];
 
