@@ -107,13 +107,13 @@ export default function HeroSlider() {
           </a>
 
           {/* Clean Floating Bottom-Left Tag (No Colliding Right Button) */}
-          <div className="absolute bottom-2.5 sm:bottom-4 left-3 sm:left-5 pointer-events-none">
-            <div className="pointer-events-auto inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full border border-slate-700/60 shadow-md">
-              <span className="relative flex h-2 w-2">
+          <div className="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-5 pointer-events-none max-w-[70%] sm:max-w-none">
+            <div className="pointer-events-auto inline-flex items-center gap-1.5 sm:gap-2 bg-slate-900/80 backdrop-blur-md text-white text-[9px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-slate-700/60 shadow-md truncate max-w-full">
+              <span className="relative flex h-2 w-2 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span>{activeBanner.tag}</span>
+              <span className="truncate">{activeBanner.tag}</span>
             </div>
           </div>
 
@@ -122,7 +122,7 @@ export default function HeroSlider() {
             type="button"
             onClick={prevSlide}
             aria-label="Previous Banner"
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/85 hover:bg-white text-slate-900 flex items-center justify-center shadow-md transition-all cursor-pointer opacity-75 hover:opacity-100"
+            className="absolute left-1.5 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/85 hover:bg-white text-slate-900 flex items-center justify-center shadow-md transition-all cursor-pointer opacity-75 hover:opacity-100"
           >
             <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
@@ -131,7 +131,7 @@ export default function HeroSlider() {
             type="button"
             onClick={nextSlide}
             aria-label="Next Banner"
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/85 hover:bg-white text-slate-900 flex items-center justify-center shadow-md transition-all cursor-pointer opacity-75 hover:opacity-100"
+            className="absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/85 hover:bg-white text-slate-900 flex items-center justify-center shadow-md transition-all cursor-pointer opacity-75 hover:opacity-100"
           >
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>

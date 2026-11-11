@@ -171,7 +171,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
       <Navbar />
 
-      <main className="bg-slate-50 min-h-screen py-6 sm:py-10">
+      <main className="bg-slate-50 min-h-screen py-6 sm:py-10 overflow-x-hidden max-w-full w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Breadcrumbs Navigation */}

@@ -53,6 +53,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://vapeshopchandigarh.com',
   },
+  icons: {
+    icon: [
+      { url: '/icon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icon-144x144.png', sizes: '144x144', type: 'image/png' },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Best Vape Shop in Chandigarh | Authentic Vapes & Same Day 30-45 Min Delivery',
     description: '100% Authentic Disposable Vapes, Pod Kits & Imported Nic Salts delivered across Chandigarh, Mohali & Panchkula in 30-45 minutes. Cash on Delivery available.',
@@ -62,10 +76,18 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero-banner.jpg',
+        url: '/images/google-search-banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'Best Vape Shop in Chandigarh - 45-Min Same Day Delivery',
+        alt: 'Vape Shop Chandigarh - Premium Vape Collection Showcase & Same Day 30-45 Min Delivery',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/images/google-search-banner.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vape Shop Chandigarh - Premium Vape Collection Showcase',
+        type: 'image/png',
       },
     ],
   },
@@ -73,7 +95,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best Vape Shop in Chandigarh | Same Day 45-Min Delivery',
     description: 'Original Elfbar, Nasty, Lost Mary, Caliburn & Geekvape devices delivered across Chandigarh, Mohali & Panchkula.',
-    images: ['/images/hero-banner.jpg'],
+    images: ['/images/google-search-banner.jpg'],
   },
   robots: {
     index: true,
@@ -109,7 +131,7 @@ export default function RootLayout({
       <head>
         <SeoStructuredData />
       </head>
-      <body className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-emerald-500 selection:text-white pb-16 lg:pb-0">
+      <body className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-emerald-500 selection:text-white pb-16 lg:pb-0 overflow-x-hidden max-w-full w-full">
         <CartProvider>
           {children}
           <AppClientOverlay />

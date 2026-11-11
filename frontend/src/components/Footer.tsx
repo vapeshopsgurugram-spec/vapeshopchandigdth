@@ -2,10 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { STORE_INFO, SEO_KEYWORDS } from '@/data/mockData';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { 
-  Flame, 
   MapPin, 
   Mail, 
   Clock, 
@@ -30,16 +30,18 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <Link 
               href="/"
-              className="flex items-center gap-2.5"
+              className="inline-block focus:outline-none group"
+              title="Vape Shop Chandigarh - Home"
             >
-              <div className="w-9 h-9 rounded-xl bg-emerald-600 p-0.5 shadow-xs">
-                <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-                  <Flame className="w-5 h-5 text-emerald-600" />
-                </div>
+              <div className="relative h-12 sm:h-14 w-48 sm:w-56">
+                <Image
+                  src="/images/vape-shop-chandigarh-logo.png"
+                  alt="Vape Shop Chandigarh Logo"
+                  fill
+                  sizes="224px"
+                  className="object-contain object-left group-hover:opacity-90 transition-opacity"
+                />
               </div>
-              <span className="text-xl font-extrabold text-slate-900">
-                VAPE SHOP <span className="text-emerald-600">CHANDIGARH</span>
-              </span>
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">

@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
 
       {/* Main Semantic Content Area for Search Engines */}
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 overflow-x-hidden w-full max-w-full">
         {/* 1. Hero Section with Auto-Sliding Banner */}
         <HeroSlider />
 

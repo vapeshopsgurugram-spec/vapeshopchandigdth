@@ -132,7 +132,7 @@ export default function FeaturedProducts() {
                       title="Add to order basket"
                     >
                       <Plus className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>+ Add</span>
+                      <span>Add</span>
                     </button>
 
                     <a

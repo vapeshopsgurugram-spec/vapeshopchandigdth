@@ -25,9 +25,12 @@ export default function SeoStructuredData() {
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, UPI, Google Pay, PhonePe, Paytm, Net Banking",
     "image": [
-      `${baseUrl}/images/hero-banner.jpg`,
+      `${baseUrl}/images/google-search-banner.jpg`,
+      `${baseUrl}/images/google-search-banner.png`,
+      `${baseUrl}/images/og-banner.jpg`,
       `${baseUrl}/images/hero-banner-2.png`
     ],
+    "logo": `${baseUrl}/images/vape-shop-chandigarh-logo.png`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "SCO 84-85, Sector 17-C, Near Neelam Cinema",
@@ -100,6 +103,13 @@ export default function SeoStructuredData() {
     "name": STORE_INFO.name,
     "url": baseUrl,
     "description": "Authentic disposable vapes, pod kits, and e-juices in Chandigarh with same day 30-45 min delivery.",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": `${baseUrl}/images/google-search-banner.jpg`,
+      "width": "1200",
+      "height": "630",
+      "caption": "Vape Shop Chandigarh - Premium Vape Collection"
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": `${baseUrl}/?s={search_term_string}`,
