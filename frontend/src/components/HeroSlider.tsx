@@ -19,19 +19,21 @@ export default function HeroSlider() {
   const banners = [
     {
       id: "banner-1",
-      image: "/images/hero-banner.jpg",
-      title: "Top Vaping Products - Pods, Devices, Refills",
-      alt: "Top Vaping Products in Chandigarh - Voopoo Argus, Geekvape B60, Lost Mary MT35000",
-      whatsappText: "Hi%2C%20I%20want%20to%20order%20from%20the%20Top%20Vaping%20Products%20collection%20in%20Chandigarh",
-      tag: "⚡ 45-Min Express Delivery in Chandigarh, Mohali & Panchkula"
-    },
-    {
-      id: "banner-2",
       image: "/images/hero-banner-2.png",
+      mobileImage: "/images/hero-banner-mobile.png",
       title: "Premium Vape Collection Showcase - Same Day Delivery Tricity",
       alt: "Premium Vape Collection Showcase in Chandigarh, Mohali & Panchkula",
       whatsappText: "Hi%2C%20I%20want%20to%20order%20from%20the%20Premium%20Vape%20Collection%20in%20Chandigarh",
       tag: "🔥 Premium Vape Collection • 100% Genuine QR Verified"
+    },
+    {
+      id: "banner-2",
+      image: "/images/hero-banner.jpg",
+      mobileImage: "/images/hero-banner-2-mobile.png",
+      title: "Top Vaping Products - Pods, Devices, Refills",
+      alt: "Top Vaping Products in Chandigarh - Voopoo Argus, Geekvape B60, Lost Mary MT35000",
+      whatsappText: "Hi%2C%20I%20want%20to%20order%20from%20the%20Top%20Vaping%20Products%20collection%20in%20Chandigarh",
+      tag: "⚡ 45-Min Express Delivery in Chandigarh, Mohali & Panchkula"
     }
   ];
 
@@ -87,22 +89,27 @@ export default function HeroSlider() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Sleek Reduced-Height Crisp Image Banner (No Text Collision, No Top Cropping) */}
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group max-w-6xl mx-auto">
+        {/* Responsive Banner Container (Wider on Desktop, Balanced Height) */}
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group w-full mx-auto aspect-[1095/1437] sm:aspect-auto sm:h-[440px] md:h-[480px] lg:h-[520px]">
           <a
             href={`https://wa.me/${STORE_INFO.whatsapp}?text=${activeBanner.whatsappText}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full focus:outline-none relative"
+            className="block w-full h-full focus:outline-none relative"
             title="Click to Order on WhatsApp"
           >
-            <div className="w-full flex items-center justify-center bg-slate-950">
-              <img
-                src={activeBanner.image}
-                alt={activeBanner.alt}
-                className="w-full h-auto max-h-[300px] sm:max-h-[380px] lg:max-h-[410px] object-contain sm:object-cover object-top sm:object-center transition-transform duration-500 group-hover:scale-[1.008]"
-                style={{ imageRendering: 'auto' }}
-              />
+            <div className="w-full h-full flex items-center justify-center bg-slate-950">
+              <picture className="w-full h-full block">
+                {activeBanner.mobileImage && (
+                  <source media="(max-width: 639px)" srcSet={activeBanner.mobileImage} />
+                )}
+                <img
+                  src={activeBanner.image}
+                  alt={activeBanner.alt}
+                  className="w-full h-full object-contain sm:object-cover object-center transition-transform duration-500 group-hover:scale-[1.008]"
+                  style={{ imageRendering: 'auto' }}
+                />
+              </picture>
             </div>
           </a>
 
@@ -153,8 +160,8 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        {/* 3 Pillars under Hero (Clean White) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mt-4 sm:mt-5 max-w-6xl mx-auto">
+        {/* 3 Pillars under Hero (Clean White - Aligned with Banner) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mt-4 sm:mt-5 w-full mx-auto">
           <div className="rounded-2xl bg-white border border-slate-200 p-4 flex items-center gap-3.5 shadow-2xs">
             <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center flex-shrink-0">
               <Truck className="w-5 h-5 text-emerald-600" />
