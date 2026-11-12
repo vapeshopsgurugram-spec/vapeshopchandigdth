@@ -20,7 +20,7 @@ export default function SeoStructuredData() {
     "description": "Premier vape shop in Chandigarh offering 100% authentic disposable vapes (Elfbar, Nasty, Lost Mary), refillable pod kits (Caliburn, Geekvape, Voopoo, Vaporesso), e-liquids, and superfast 30-45 min express delivery across Chandigarh, Mohali, and Panchkula.",
     "url": baseUrl,
     "email": STORE_INFO.email,
-    "telephone": "+919876543210",
+    "telephone": "+918295899660",
     "priceRange": "₹₹",
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, UPI, Google Pay, PhonePe, Paytm, Net Banking",
@@ -91,7 +91,7 @@ export default function SeoStructuredData() {
       "worstRating": "1"
     },
     "sameAs": [
-      "https://wa.me/919876543210"
+      "https://wa.me/918295899660"
     ]
   };
 
@@ -166,6 +166,26 @@ export default function SeoStructuredData() {
     }))
   };
 
+  // 5. Organization Schema with Helpline ContactPoint
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${baseUrl}/#organization`,
+    "name": STORE_INFO.name,
+    "url": baseUrl,
+    "logo": `${baseUrl}/images/vape-shop-chandigarh-logo.png`,
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+918295899660",
+        "contactType": "customer service",
+        "contactOption": "HearingImpairedSupported",
+        "areaServed": ["IN-CH", "IN-PB", "IN-HR"],
+        "availableLanguage": ["English", "Hindi", "Punjabi"]
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -175,6 +195,10 @@ export default function SeoStructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <script
         type="application/ld+json"

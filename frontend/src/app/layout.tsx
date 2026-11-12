@@ -53,6 +53,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://vapeshopchandigarh.com',
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
   icons: {
     icon: [
       { url: '/icon-48x48.png', sizes: '48x48', type: 'image/png' },
