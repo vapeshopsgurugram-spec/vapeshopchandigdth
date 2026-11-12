@@ -19,7 +19,7 @@ export default function HeroSlider() {
   const banners = [
     {
       id: "banner-1",
-      image: "/images/hero-banner-2.png",
+      image: "/images/desktop-hero-banner-1.png",
       mobileImage: "/images/hero-banner-mobile.png",
       title: "Premium Vape Collection Showcase - Same Day Delivery Tricity",
       alt: "Premium Vape Collection Showcase in Chandigarh, Mohali & Panchkula",
@@ -28,7 +28,7 @@ export default function HeroSlider() {
     },
     {
       id: "banner-2",
-      image: "/images/hero-banner.jpg",
+      image: "/images/desktop-hero-banner-2.png",
       mobileImage: "/images/hero-banner-2-mobile.png",
       title: "Top Vaping Products - Pods, Devices, Refills",
       alt: "Top Vaping Products in Chandigarh - Voopoo Argus, Geekvape B60, Lost Mary MT35000",
@@ -90,7 +90,7 @@ export default function HeroSlider() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Responsive Banner Container (Full Width Edge-to-Edge with Zero Cut) */}
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group w-full mx-auto aspect-[1095/1437] sm:aspect-[1636/961]">
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group w-full mx-auto aspect-[1095/1437] sm:aspect-[1983/793]">
           <a
             href={`https://wa.me/${STORE_INFO.whatsapp}?text=${activeBanner.whatsappText}`}
             target="_blank"
