@@ -89,8 +89,8 @@ export default function HeroSlider() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Responsive Banner Container (Wider on Desktop, Balanced Height) */}
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group w-full mx-auto aspect-[1095/1437] sm:aspect-auto sm:h-[440px] md:h-[480px] lg:h-[520px]">
+        {/* Responsive Banner Container (Full Width Edge-to-Edge with Zero Cut) */}
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group w-full mx-auto aspect-[1095/1437] sm:aspect-[1636/961]">
           <a
             href={`https://wa.me/${STORE_INFO.whatsapp}?text=${activeBanner.whatsappText}`}
             target="_blank"
@@ -106,7 +106,7 @@ export default function HeroSlider() {
                 <img
                   src={activeBanner.image}
                   alt={activeBanner.alt}
-                  className="w-full h-full object-contain sm:object-cover object-center transition-transform duration-500 group-hover:scale-[1.008]"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.008]"
                   style={{ imageRendering: 'auto' }}
                 />
               </picture>
