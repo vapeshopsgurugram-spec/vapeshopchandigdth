@@ -4,7 +4,7 @@ export const STORE_INFO = {
   name: "Vape Shop Chandigarh",
   tagline: "Tricity's #1 Authentic Vape & Pod Store",
   whatsapp: "918295899660",
-  email: "support@vapeshopchandigarh.com",
+  email: "support@vapeshoppchandigarh.com",
   address: "SCO 84-85, Sector 17-C, Near Neelam Cinema, Chandigarh, 160017",
   operatingHours: "10:00 AM - 11:30 PM (All 7 Days Open)",
   geo: {

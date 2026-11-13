@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vapeshopchandigarh.com'),
+  metadataBase: new URL('https://www.vapeshoppchandigarh.com'),
   title: {
     default: 'Best Vape Shop in Chandigarh | #1 Vape Store 30-45 Min Same Day Delivery',
     template: '%s | Vape Shop Chandigarh',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     'smoke shop chandigarh',
     'e-cigarette delivery chandigarh',
   ],
-  authors: [{ name: 'Vape Shop Chandigarh', url: 'https://vapeshopchandigarh.com' }],
+  authors: [{ name: 'Vape Shop Chandigarh', url: 'https://www.vapeshoppchandigarh.com' }],
   creator: 'Vape Shop Chandigarh',
   publisher: 'Vape Shop Chandigarh',
   formatDetection: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: 'https://vapeshopchandigarh.com',
+    canonical: 'https://www.vapeshoppchandigarh.com',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Vape Shop in Chandigarh | Authentic Vapes & Same Day 30-45 Min Delivery',
     description: '100% Authentic Disposable Vapes, Pod Kits & Imported Nic Salts delivered across Chandigarh, Mohali & Panchkula in 30-45 minutes. Cash on Delivery available.',
-    url: 'https://vapeshopchandigarh.com',
+    url: 'https://www.vapeshoppchandigarh.com',
     siteName: 'Vape Shop Chandigarh',
     locale: 'en_IN',
     type: 'website',

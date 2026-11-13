@@ -20,7 +20,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://vapeshopchandigarh.com/sitemap.xml',
-    host: 'https://vapeshopchandigarh.com',
+    sitemap: 'https://www.vapeshoppchandigarh.com/sitemap.xml',
+    host: 'https://www.vapeshoppchandigarh.com',
   };
 }

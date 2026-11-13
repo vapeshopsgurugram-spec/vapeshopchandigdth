@@ -2,7 +2,7 @@ import React from 'react';
 import { STORE_INFO, PRODUCTS, FAQS } from '@/data/mockData';
 
 export default function SeoStructuredData() {
-  const baseUrl = "https://vapeshopchandigarh.com";
+  const baseUrl = "https://www.vapeshoppchandigarh.com";
 
   // 1. LocalBusiness / Vape Store Schema for Google Local Maps & Search Pack
   const localBusinessSchema = {

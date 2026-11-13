@@ -57,12 +57,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       'same day vape delivery tricity',
     ],
     alternates: {
-      canonical: `https://vapeshopchandigarh.com/product/${product.slug}`,
+      canonical: `https://www.vapeshoppchandigarh.com/product/${product.slug}`,
     },
     openGraph: {
       title: `${product.name} - ₹${product.price} | Vape Shop Chandigarh`,
       description: `Original ${product.name} with 100% QR code verification and 45-min delivery across Chandigarh, Mohali & Panchkula.`,
-      url: `https://vapeshopchandigarh.com/product/${product.slug}`,
+      url: `https://www.vapeshoppchandigarh.com/product/${product.slug}`,
       images: [
         {
           url: product.image,
@@ -103,7 +103,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
-    image: `https://vapeshopchandigarh.com${product.image}`,
+    image: `https://www.vapeshoppchandigarh.com${product.image}`,
     description: product.description,
     sku: product.id,
     brand: {
@@ -112,7 +112,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     },
     offers: {
       '@type': 'Offer',
-      url: `https://vapeshopchandigarh.com/product/${product.slug}`,
+      url: `https://www.vapeshoppchandigarh.com/product/${product.slug}`,
       priceCurrency: 'INR',
       price: product.price,
       priceValidUntil: '2027-12-31',
@@ -170,19 +170,19 @@ export default async function ProductDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://vapeshopchandigarh.com',
+        item: 'https://www.vapeshoppchandigarh.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Products',
-        item: 'https://vapeshopchandigarh.com/#featured-products',
+        item: 'https://www.vapeshoppchandigarh.com/#featured-products',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: product.name,
-        item: `https://vapeshopchandigarh.com/product/${product.slug}`,
+        item: `https://www.vapeshoppchandigarh.com/product/${product.slug}`,
       },
     ],
   };

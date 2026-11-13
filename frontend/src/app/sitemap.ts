@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { PRODUCTS } from '@/data/mockData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://vapeshopchandigarh.com';
+  const baseUrl = 'https://www.vapeshoppchandigarh.com';
   const currentDate = new Date('2026-11-11T00:00:00.000Z');
 
   const staticRoutes: MetadataRoute.Sitemap = [
