@@ -14,10 +14,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.vapeshoppchandigarh.com'),
   title: {
-    default: 'Best Vape Shop in Chandigarh | #1 Vape Store 30-45 Min Same Day Delivery',
+    default: 'Vape Shop Chandigarh | Buy Disposable Vapes Online | 30 Min Delivery',
     template: '%s | Vape Shop Chandigarh',
   },
-  description: '#1 Rated Vape Shop in Chandigarh. Buy 100% authentic disposable vapes, refillable pod kits, coils & imported nic salts (Elfbar, Nasty, Lost Mary, Uwell Caliburn, Geekvape). Same-day 30-45 min express delivery across Chandigarh (Sector 17, 22, 35, 43), Mohali & Panchkula. Cash on delivery & UPI.',
+  description: "Chandigarh's premier destination for 100% authentic disposable vapes & pod kits. Order Elfbar, IGET & Lost Mary with superfast 30-min express delivery in Tricity. Cash on Delivery & UPI available.",
   keywords: [
     'vape shop chandigarh',
     'vape store chandigarh',
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'Best Vape Shop in Chandigarh | Authentic Vapes & Same Day 30-45 Min Delivery',
-    description: '100% Authentic Disposable Vapes, Pod Kits & Imported Nic Salts delivered across Chandigarh, Mohali & Panchkula in 30-45 minutes. Cash on Delivery available.',
+    title: 'Vape Shop Chandigarh | Buy Disposable Vapes Online | 30 Min Delivery',
+    description: "Chandigarh's premier destination for 100% authentic disposable vapes & pod kits with 30-min express delivery across Chandigarh, Mohali & Panchkula.",
     url: 'https://www.vapeshoppchandigarh.com',
     siteName: 'Vape Shop Chandigarh',
     locale: 'en_IN',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
         url: '/images/google-search-banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'Vape Shop Chandigarh - Premium Vape Collection Showcase & Same Day 30-45 Min Delivery',
+        alt: 'Vape Shop Chandigarh - Premium Disposable Vapes & 30 Min Delivery',
         type: 'image/jpeg',
       },
       {
@@ -96,8 +96,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Vape Shop in Chandigarh | Same Day 45-Min Delivery',
-    description: 'Original Elfbar, Nasty, Lost Mary, Caliburn & Geekvape devices delivered across Chandigarh, Mohali & Panchkula.',
+    title: 'Vape Shop Chandigarh | Buy Disposable Vapes Online (30 Min Delivery)',
+    description: '100% authentic disposable vapes & pods delivered in 30 minutes across Chandigarh & Tricity. Cash on Delivery available.',
     images: ['/images/google-search-banner.jpg'],
   },
   robots: {

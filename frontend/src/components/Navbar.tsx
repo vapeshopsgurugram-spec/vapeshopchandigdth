@@ -62,7 +62,7 @@ export default function Navbar() {
           </Link>
 
           {/* Clean Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-7 xl:gap-9 text-sm font-bold text-slate-200">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold text-slate-200">
             <Link 
               href="/#featured-products" 
               className="hover:text-emerald-400 transition-colors flex items-center gap-1.5 whitespace-nowrap"
@@ -75,6 +75,18 @@ export default function Navbar() {
               className="hover:text-emerald-400 transition-colors whitespace-nowrap"
             >
               Categories
+            </Link>
+            <Link 
+              href="/#delivery-areas" 
+              className="hover:text-emerald-400 transition-colors whitespace-nowrap"
+            >
+              Tricity Delivery
+            </Link>
+            <Link 
+              href="/blog" 
+              className="hover:text-emerald-400 transition-colors whitespace-nowrap"
+            >
+              Guides
             </Link>
             <Link 
               href="/#reviews" 
@@ -176,6 +188,20 @@ export default function Navbar() {
                 className="p-2.5 rounded-xl hover:bg-slate-900 hover:text-white transition-colors"
               >
                 Product Categories
+              </Link>
+              <Link 
+                href="/#delivery-areas"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2.5 rounded-xl hover:bg-slate-900 hover:text-white transition-colors"
+              >
+                Tricity Delivery Areas
+              </Link>
+              <Link 
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2.5 rounded-xl hover:bg-slate-900 hover:text-white transition-colors"
+              >
+                Vape Buying Guides
               </Link>
               <Link 
                 href="/#reviews"

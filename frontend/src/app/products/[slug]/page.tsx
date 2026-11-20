@@ -1,5 +1,14 @@
-import ProductDetailPage, { generateMetadata, generateStaticParams } from '@/app/product/[slug]/page';
+import { permanentRedirect } from 'next/navigation';
 
-export { generateMetadata, generateStaticParams };
-export default ProductDetailPage;
+export { generateStaticParams } from '@/app/product/[slug]/page';
+
+export default async function ProductsRedirectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  permanentRedirect(`/product/${slug}`);
+}
+
 

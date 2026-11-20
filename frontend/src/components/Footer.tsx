@@ -124,33 +124,33 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm font-medium">
               <li>
-                <Link href="#delivery-areas" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+                <Link href="/delivery/chandigarh" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Vape Delivery Sector 17 &amp; 22</span>
+                  <span>Vape Delivery Chandigarh (Sector 17, 22, 35)</span>
                 </Link>
               </li>
               <li>
-                <Link href="#delivery-areas" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+                <Link href="/delivery/mohali" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Vape Delivery Sector 35 &amp; 43</span>
+                  <span>Vape Shop Mohali (Phase 3B2 &amp; 7)</span>
                 </Link>
               </li>
               <li>
-                <Link href="#delivery-areas" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+                <Link href="/delivery/panchkula" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Vape Store Mohali Phase 3B2 &amp; 7</span>
+                  <span>Vape Delivery Panchkula (Sec 8/9/20)</span>
                 </Link>
               </li>
               <li>
-                <Link href="#delivery-areas" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
-                  <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Vape Delivery Panchkula Sector 8/9</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#delivery-areas" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+                <Link href="/delivery/zirakpur" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Vape Delivery Zirakpur &amp; Kharar</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5 font-bold text-emerald-700">
+                  <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>Vape Buying &amp; Safety Guides (Blog)</span>
                 </Link>
               </li>
             </ul>

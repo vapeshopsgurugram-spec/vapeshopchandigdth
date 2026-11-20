@@ -96,15 +96,23 @@ export default function LocalSeoSection() {
                 <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <span>100% Discreet Plain Box Packaging • Live WhatsApp Tracking</span>
               </div>
-              <a
-                href={`https://wa.me/${STORE_INFO.whatsapp}?text=Hi%2C%20I%20need%20urgent%20vape%20delivery%20in%20${encodeURIComponent(activeArea.name)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs transition-all"
-              >
-                <WhatsAppIcon className="w-4 h-4" />
-                <span>Order Delivery in {activeArea.name.split(' ')[0]}</span>
-              </a>
+              <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+                <a
+                  href={`/delivery/${['chandigarh', 'mohali', 'panchkula', 'zirakpur'][selectedAreaIndex]}`}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-bold text-xs sm:text-sm px-4 py-3 rounded-xl transition-all"
+                >
+                  <span>{activeArea.name.split(' ')[0]} Delivery Page &rarr;</span>
+                </a>
+                <a
+                  href={`https://wa.me/${STORE_INFO.whatsapp}?text=Hi%2C%20I%20need%20urgent%20vape%20delivery%20in%20${encodeURIComponent(activeArea.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs transition-all"
+                >
+                  <WhatsAppIcon className="w-4 h-4" />
+                  <span>Order in {activeArea.name.split(' ')[0]}</span>
+                </a>
+              </div>
             </div>
           </div>
 

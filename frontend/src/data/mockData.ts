@@ -600,7 +600,7 @@ export const FAQS: FaqItem[] = [
   {
     id: "faq-3",
     question: "How do I place an order for delivery in Chandigarh?",
-    answer: "You can easily place your order directly through our official WhatsApp hotline (+91 98765 43210). Send us your desired device/flavor and delivery address. Our team will immediately confirm stock, provide live dispatch ETA, and assign an express rider.",
+    answer: "You can easily place your order directly through our official WhatsApp hotline (+91 8295899660). Send us your desired device/flavor and delivery address. Our team will immediately confirm stock, provide live dispatch ETA, and assign an express rider.",
   },
   {
     id: "faq-4",
