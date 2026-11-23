@@ -11,13 +11,16 @@ export default function SeoStructuredData() {
     "@id": `${baseUrl}/#store`,
     "name": STORE_INFO.name,
     "alternateName": [
+      "Vape Shop Chandigarh",
+      "Best Vape Shop in Chandigarh",
       "Vape Store Chandigarh",
-      "Vape Shop Near Me Chandigarh",
+      "Buy Disposable Vapes Online Chandigarh",
       "Vape Delivery Chandigarh",
+      "Vape Shop Near Me Chandigarh",
       "Best Vape Shop Mohali",
       "Vape Store Panchkula"
     ],
-    "description": "Premier vape shop in Chandigarh offering 100% authentic disposable vapes (Elfbar, Nasty, Lost Mary), refillable pod kits (Caliburn, Geekvape, Voopoo, Vaporesso), e-liquids, and superfast 30-45 min express delivery across Chandigarh, Mohali, and Panchkula.",
+    "description": "#1 Vape Shop in Chandigarh offering 100% authentic disposable vapes (Elfbar, Nasty, Lost Mary), refillable pod kits (Caliburn, Geekvape, Voopoo), e-liquids, and superfast 30-min express delivery across Chandigarh, Mohali, and Panchkula.",
     "url": baseUrl,
     "email": STORE_INFO.email,
     "telephone": "+918295899660",

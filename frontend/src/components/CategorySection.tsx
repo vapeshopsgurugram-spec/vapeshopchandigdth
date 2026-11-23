@@ -35,7 +35,7 @@ export default function CategorySection() {
               <span>Chandigarh Store Collections</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Explore Top Vape Categories in <span className="text-emerald-600">Chandigarh</span>
+              Featured Collections at <span className="text-emerald-600">Vape Shop Chandigarh</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
               From high-puff smart screen disposables to refillable pod systems and premium nicotine salts, choose from our verified catalog.

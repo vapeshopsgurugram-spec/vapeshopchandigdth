@@ -153,6 +153,12 @@ export default function Footer() {
                   <span>Vape Buying &amp; Safety Guides (Blog)</span>
                 </Link>
               </li>
+              <li>
+                <Link href="/sitemap" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-700">
+                  <ChevronRight className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>All Products &amp; Pages (HTML Sitemap)</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -212,9 +218,17 @@ export default function Footer() {
         {/* Bottom Credits & Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <p>© {currentYear} Vape Shop Chandigarh. All rights reserved.</p>
-          <p className="flex items-center gap-1 font-medium text-slate-600">
-            Built with 100% SEO &amp; Semantic Standards for Chandigarh, Mohali &amp; Panchkula.
-          </p>
+          <div className="flex items-center gap-3 font-medium text-slate-600">
+            <Link href="/sitemap" className="hover:text-emerald-700 underline">
+              HTML Sitemap
+            </Link>
+            <span>•</span>
+            <Link href="/sitemap.xml" className="hover:text-emerald-700 underline" target="_blank">
+              XML Sitemap
+            </Link>
+            <span>•</span>
+            <span>Chandigarh, Mohali &amp; Panchkula</span>
+          </div>
         </div>
       </div>
     </footer>

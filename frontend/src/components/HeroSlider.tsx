@@ -82,12 +82,19 @@ export default function HeroSlider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* 100% SEO Hidden Heading for Google Crawlers */}
-      <h1 className="sr-only">
-        Best Vape Shop in Chandigarh - Same Day 45-Min Express Delivery Tricity (Disposable Vapes, Pod Systems, Refills)
-      </h1>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Sleek, Compact & Elegant SEO H1 Heading */}
+        <div className="text-center max-w-2xl mx-auto pt-0 pb-2.5 sm:pb-3 px-2">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-1">
+            <span>⚡ 30-Min Delivery in Chandigarh, Mohali &amp; Panchkula</span>
+          </div>
+          <h1 className="text-base sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight">
+            Vape Shop Chandigarh
+          </h1>
+          <p className="text-slate-500 text-[11px] sm:text-xs mt-0.5 max-w-lg mx-auto">
+            100% Authentic Disposable Vapes, Pod Kits &amp; Imported Nic Salts • COD &amp; UPI
+          </p>
+        </div>
         
         {/* Responsive Banner Container (Full Width Edge-to-Edge with Zero Cut) */}
         <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 group w-full mx-auto aspect-[1095/1437] sm:aspect-[1983/793]">

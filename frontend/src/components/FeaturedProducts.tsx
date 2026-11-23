@@ -43,10 +43,10 @@ export default function FeaturedProducts() {
             <span>100% Genuine Stock in Chandigarh</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Best Selling Vapes &amp; Pod Kits in <span className="text-emerald-600">Chandigarh</span>
+            Best Selling Vapes at <span className="text-emerald-600">Vape Shop Chandigarh</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">
-            Official Elfbar, Nasty, Lost Mary, Uwell Caliburn &amp; Vaporesso devices with guaranteed same-day 45-min delivery across Tricity.
+            Official Elfbar, Nasty, Lost Mary, Uwell Caliburn &amp; Vaporesso devices with guaranteed same-day 30-min delivery across Tricity.
           </p>
         </div>
 

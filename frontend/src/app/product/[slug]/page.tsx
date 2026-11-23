@@ -187,6 +187,37 @@ export default async function ProductDetailPage({ params }: PageProps) {
     ],
   };
 
+  const productFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How fast can I get ${product.name} delivered in Chandigarh?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `We provide superfast same-day express delivery in 30 to 45 minutes across Chandigarh (Sector 17, 22, 35, 43), Mohali, and Panchkula with Cash on Delivery and discreet packaging.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is this ${product.name} 100% authentic with a scratch QR verification code?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Yes, 100%. Every ${product.brand} device sold at Vape Shop Chandigarh comes in an original factory-sealed box with an authentic scratch-off QR code you can scan and verify directly on the manufacturer security website.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What payment methods are accepted for ${product.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `We accept Cash on Delivery (COD) as well as UPI (Google Pay, PhonePe, Paytm, and Net Banking) across Chandigarh, Mohali, and Panchkula.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       {/* Google SEO JSON-LD Injections */}
@@ -197,6 +228,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productFaqSchema) }}
       />
 
       <Navbar />
@@ -262,7 +297,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   </div>
                   <div className="bg-slate-50 border border-slate-200 p-2.5 rounded-xl">
                     <Truck className="w-4 h-4 text-emerald-600 mx-auto mb-1" />
-                    <div className="text-[10px] font-bold text-slate-800">45-Min Express</div>
+                    <div className="text-[10px] font-bold text-slate-800">30-Min Express</div>
                     <div className="text-[9px] text-slate-500">Chandigarh &amp; Tricity</div>
                   </div>
                   <div className="bg-slate-50 border border-slate-200 p-2.5 rounded-xl">
@@ -447,6 +482,51 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </div>
 
           </div>
+
+          {/* Local Tricity Express Delivery Hub Links Box for Deep Crawling */}
+          <section className="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 sm:p-8 mb-10">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+              <div>
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">
+                  <Truck className="w-4 h-4 text-emerald-600" />
+                  <span>30-Min Instant Dispatch Across Tricity</span>
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                  Need {product.name} Delivered to Your Location Today?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                  Our riders are stationed across key sectors in Chandigarh, Mohali, Panchkula &amp; Zirakpur.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-2 w-full lg:w-auto">
+                <Link
+                  href="/delivery/chandigarh"
+                  className="bg-white hover:bg-emerald-600 hover:text-white text-slate-800 text-xs font-bold px-3.5 py-2 rounded-lg border border-slate-200 transition-colors shadow-2xs"
+                >
+                  Chandigarh (Sec 17, 35) &rarr;
+                </Link>
+                <Link
+                  href="/delivery/mohali"
+                  className="bg-white hover:bg-emerald-600 hover:text-white text-slate-800 text-xs font-bold px-3.5 py-2 rounded-lg border border-slate-200 transition-colors shadow-2xs"
+                >
+                  Mohali (Ph 3B2, 7) &rarr;
+                </Link>
+                <Link
+                  href="/delivery/panchkula"
+                  className="bg-white hover:bg-emerald-600 hover:text-white text-slate-800 text-xs font-bold px-3.5 py-2 rounded-lg border border-slate-200 transition-colors shadow-2xs"
+                >
+                  Panchkula (Sec 8, 20) &rarr;
+                </Link>
+                <Link
+                  href="/delivery/zirakpur"
+                  className="bg-white hover:bg-emerald-600 hover:text-white text-slate-800 text-xs font-bold px-3.5 py-2 rounded-lg border border-slate-200 transition-colors shadow-2xs"
+                >
+                  Zirakpur (VIP Rd) &rarr;
+                </Link>
+              </div>
+            </div>
+          </section>
 
           {/* Related Products Grid */}
           {relatedProducts.length > 0 && (

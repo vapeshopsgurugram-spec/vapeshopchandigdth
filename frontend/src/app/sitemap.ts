@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.vapeshoppchandigarh.com';
   const currentDate = new Date('2026-11-20T00:00:00.000Z');
 
-  // Main Homepage & Blog Index
+  // Main Homepage, Blog Index & HTML Sitemap
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/sitemap`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.80,
     },
   ];
 
